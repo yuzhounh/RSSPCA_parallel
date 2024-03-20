@@ -20,7 +20,7 @@ for iDataset=1:nDataset
         rng(iDataset+iRep);
         ix_train=zeros(n_image,1);
         tmp=randperm(n_image);
-        ix_train(tmp(1:floor(n_image*2/3)))=1; % 2/3 images for training
+        ix_train(tmp(1:ceil(n_image*2/3)))=1; % 2/3 images for training
         ix_test=1-ix_train;
 
         ix_train=find(ix_train);
