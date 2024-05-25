@@ -1,4 +1,4 @@
-function classify_RSPCA(dataset,iRep,iEta1)
+function classify_RSPCA(cDataset,iRep,iEta1)
 % Calculate the classification accuracy of RSPCA.
 % 2022-6-26 00:34:45
 
@@ -10,10 +10,10 @@ cEta1=sEta1(iEta1);
 lg_cEta1=lg_sEta1(iEta1);
 
 % Laplacian matrix
-load(sprintf('data/%s_Laplacian.mat',dataset),'L');
+load(sprintf('data/%s_Laplacian.mat',cDataset),'L');
 
 % load data
-load(sprintf('data/%s_r%d.mat',dataset,iRep));
+load(sprintf('data/%s_r%d.mat',cDataset,iRep));
 
 % RSPCA, a special case of RSSPCA when eta_2=0
 nPV=30; % number of projection vectors
@@ -43,4 +43,4 @@ t1=toc;
 time=(t0+t1)/60;
 
 % save the classification accuracies
-save(sprintf('result/classify_RSPCA_%s_iRep_%d_iEta1_%d.mat',dataset,iRep,iEta1),'accuracy','iter','time','lg_cEta1');
+save(sprintf('result/classify_RSPCA_%s_iRep_%d_iEta1_%d.mat',cDataset,iRep,iEta1),'accuracy','iter','time','lg_cEta1');

@@ -1,10 +1,10 @@
-function classify_PCA(dataset,iRep)
+function classify_PCA(cDataset,iRep)
 % Calculate the classification accuracy of PCA. 
 % 2022-6-26 00:34:45
 
 % load data
 tic;
-load(sprintf('data/%s_r%d.mat',dataset,iRep));
+load(sprintf('data/%s_r%d.mat',cDataset,iRep));
 
 % PCA
 nPV=30; % number of projection vectors
@@ -34,4 +34,4 @@ t1=toc;
 time=(t0+t1)/60;
 
 % save the classification accuracies
-save(sprintf('result/classify_PCA_%s_iRep_%d.mat',dataset,iRep),'accuracy','time');
+save(sprintf('result/classify_PCA_%s_iRep_%d.mat',cDataset,iRep),'accuracy','time');

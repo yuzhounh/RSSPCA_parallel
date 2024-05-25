@@ -1,13 +1,13 @@
-function classify_PCAL1(dataset,iRep)
+function classify_PCAL1(cDataset,iRep)
 % Calculate the classification accuracy of PCA-L1. 
 % 2022-6-26 00:34:45
 
 % Laplacian matrix
 tic;
-load(sprintf('data/%s_Laplacian.mat',dataset),'L');
+load(sprintf('data/%s_Laplacian.mat',cDataset),'L');
 
 % load data
-load(sprintf('data/%s_r%d.mat',dataset,iRep));
+load(sprintf('data/%s_r%d.mat',cDataset,iRep));
 
 % PCA-L1, a speical case of RSSPCA when eta_1=0 and eta_2=0
 nPV=30; % number of projection vectors
@@ -37,4 +37,4 @@ t1=toc;
 time=(t0+t1)/60;
 
 % save the classification accuracies
-save(sprintf('result/classify_PCAL1_%s_iRep_%d.mat',dataset,iRep),'accuracy','iter','time');
+save(sprintf('result/classify_PCAL1_%s_iRep_%d.mat',cDataset,iRep),'accuracy','iter','time');
