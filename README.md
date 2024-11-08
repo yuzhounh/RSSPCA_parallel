@@ -1,4 +1,4 @@
-# Robust Sparse Smooth Principal Component Analysis (RSSPCA)
+# Robust Sparse Smooth Principal Component Analysis (RSSPCA) - Parallel Implementation
 
 [![License](https://img.shields.io/badge/License-BSD-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
@@ -8,9 +8,9 @@ $$\mathop{\max}_{w}\lVert X^Tw\rVert_1,  s.t. \lVert w\rVert_2^2=1,  \lVert w\rV
 
 where $c_1$ and $c_2$ are positive constants, and $L$ is a Laplacian matrix representing the two-dimensional spatial structure information of images.
 
-The algorithm combines robustness (for outliers/noise resistance), sparsity (for feature selection), and smoothness (for spatial relationship preservation). It has been validated on six benchmark face databases (AR, FEI, FERET, GT, ORL, Yale) against methods including PCA, PCA-L1, RSPCA, and RSMPCA.
+The algorithm combines robustness (for outliers/noise resistance), sparsity (for feature selection), and smoothness (for spatial relationship preservation). It has been validated on six benchmark face databases (AR, FEI, FERET, GT, ORL, Yale) against methods like PCA, PCA-L1, RSPCA, and RSMPCA.
 
-To run the demo, execute `main.m` in MATLAB. For large-scale applications, a parallel computing version is available at [RSSPCA_2](https://github.com/yuzhounh/RSSPCA_2). Additional benchmark face databases can be found [here](https://github.com/yuzhounh/Face-databases).
+To run the demo, execute `main.m` in MATLAB. This is the parallel computing implementation of RSSPCA, designed to improve performance for large-scale face reconstruction and recognition tasks. The original sequential implementation is available at [RSSPCA](https://github.com/yuzhounh/RSSPCA). Additional benchmark face databases can be found [here](https://github.com/yuzhounh/Face-databases).
 
 If you use this code, please cite our paper:
 ```
