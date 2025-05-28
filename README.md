@@ -14,7 +14,16 @@ To run the demo, execute `main.m` in MATLAB. This is the parallel computing impl
 
 If you use this code, please cite our paper:
 ```
-Paper citation will be added
+@article{wang2025robust,
+author = {Jing Wang and Xiao Xie and Li Zhang and Jian Li and Hao Cai and Yan Feng},
+title = {Robust sparse smooth principal component analysis for face reconstruction and recognition},
+journal = {PLOS ONE},
+year = {2025},
+volume = {20},
+number = {5},
+pages = {e0323281},
+doi = {10.1371/journal.pone.0323281}
+}
 ```
 
 **Contact:** Jing Wang (wangjing@xynu.edu.cn)
